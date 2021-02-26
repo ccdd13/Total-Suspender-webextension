@@ -77,10 +77,10 @@ jobs:
     - run: npm outdated
     - run: npm fund
     
-    - run: npm run lint
-    - run: npm run test
     - run: npm run build-dev
     - run: npm run build-prod
+    - run: npm run lint
+    - run: npm run test
     - run: npm run pack
 
     - run: tree -a
