@@ -11,7 +11,9 @@
     "build-prod": "npx rimraf ./dist && npx webpack --config ./webpack.prod.js",
     "browser": "web-ext run --config .web-ext-config.js",
     "pack": "npm run build-prod && web-ext build --config .web-ext-config.js",
-    "watch": "npm run build-dev && concurrently \"npx webpack --config ./webpack.dev.js --watch\" \"web-ext run --config .web-ext-config.js\""
+    "watch": "npm run build-dev && concurrently \"npx webpack --config ./webpack.dev.js --watch\" \"web-ext run --config .web-ext-config.js\"",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "jest": {
     "setupFiles": [
@@ -65,12 +67,14 @@
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.3.1",
     "extract-text-webpack-plugin": "^3.0.2",
-    "jquery": "^3.4.1",
-    "lodash": "^4.17.11",
+    "jquery": "^3.5.0",
+    "lodash": "^4.17.21",
     "melanke-watchjs": "^1.5.0",
-    "mithril": "^1.1.6",
+    "mithril": "^1.1.7",
     "popper.js": "^1.15.0",
-    "webpack": "^3.12.0",
-    "webpack-merge": "^4.2.1"
-  }
+    "webpack": "^4.0.0",
+    "webpack-merge": "^4.2.1",
+    "snyk": "^1.461.0"
+  },
+  "snyk": true
 }
