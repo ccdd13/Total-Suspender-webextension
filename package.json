@@ -7,11 +7,11 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "web-ext lint --config .web-ext-config.js",
-    "build-dev": "npx rimraf ./dist && npx webpack --config ./webpack.dev.js",
-    "build-prod": "npx rimraf ./dist && npx webpack --config ./webpack.prod.js",
+    "build-dev": "npx rimraf ./dist && npx webpack-cli --config ./webpack.dev.js",
+    "build-prod": "npx rimraf ./dist && npx webpack-cli --config ./webpack.prod.js",
     "browser": "web-ext run --config .web-ext-config.js",
     "pack": "npm run build-prod && web-ext build --config .web-ext-config.js",
-    "watch": "npm run build-dev && concurrently \"npx webpack --config ./webpack.dev.js --watch\" \"web-ext run --config .web-ext-config.js\"",
+    "watch": "npm run build-dev && concurrently \"npx webpack-cli --config ./webpack.dev.js --watch\" \"web-ext run --config .web-ext-config.js\"",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
   },
@@ -60,7 +60,8 @@
     "spawn-loader": "^7.0.1",
     "style-loader": "^2.0.0",
     "web-ext": "^6.0.0",
-    "webextension-polyfill": "^0.7.0"
+    "webextension-polyfill": "^0.7.0",
+    "webpack-cli": "^4.6.0"
   },
   "dependencies": {
     "babel-minify-webpack-plugin": "^0.3.1",
