@@ -46,7 +46,7 @@
     "extricate-loader": "^3.0.0",
     "file-loader": "^6.2.0",
     "html-loader": "^2.1.2",
-    "imports-loader": "^2.0.0",
+    "imports-loader": "^3.0.0",
     "interpolate-loader": "^2.0.0",
     "jest": "^26.6.3",
     "jest-webextension-mock": "^3.5.0",
